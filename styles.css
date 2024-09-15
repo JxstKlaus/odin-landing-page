@@ -11,6 +11,16 @@ li{
 a{
     text-decoration: none;
     font-size: 1.3rem;
+    transition: all ease-in-out .5ss;
+}
+
+.header li:hover{
+    transform: scale(1.2);
+    
+}
+
+button:hover{
+    transform: scale(1.1);
 }
 
 .one{
@@ -30,11 +40,17 @@ a{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    @media(max-width: 1024px){
+        justify-content: center;
+    }
 }
 
 .header ul{
-    gap: 20px;
+    gap: 30px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -42,12 +58,27 @@ a{
     display: flex;
     gap: 30px;
     justify-content: space-between;
-    margin: 40px 70px 100px 70px;
+    flex: 1;
+    margin: 20px 70px 100px 70px;
+    @media(max-width: 1024px){
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 60px;
+    }
     
 }
 
 .one .hero .left{
     align-content: center;
+    flex-shrink: 1;
+}
+
+.one .hero .right{
+    max-width: 50%;
+    flex-shrink: 2;
+    @media(max-width: 1024px){
+        
+    }
 }
 
 .one h1{
@@ -60,8 +91,10 @@ a{
 }
 
 img.main-raccoon{
-    height: 500px;
-    width: auto;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex: 1;
 }
 
 .sign-up-button{
@@ -89,16 +122,27 @@ img.main-raccoon{
     display: flex;
     justify-content: center;
     gap: 48px;
-    padding-bottom: 48px;
+    padding: 0  12px 48px 12px;
+    @media(max-width: 1024px){
+        flex-wrap: wrap;
+    }
 }
 
 .raccoon-type img{
     border: #3882F6 solid 4px;
     border-radius: 12px;
+    transition: ease .5s all ;
+}
+
+.raccoon-type img:hover{
+    transform: scale(1.4);
+
 }
 
 .raccoon-type img, .raccoon-type p{
     width: 200px;
+    
+    
 }
 
 .raccoon-type p{
@@ -114,11 +158,15 @@ img.main-raccoon{
     width: 35%;
     padding: 48px 0;;
     margin: auto;
+    @media(max-width: 1024px){
+        width: 60%;
+    }
 }
 
 .three p, h5{
     color: #1F2937;
     font-style: italic;
+    
     
 }
 
@@ -151,6 +199,9 @@ img.main-raccoon{
     border-radius: 8px;
     padding: 16px;
     gap: 12px;
+    @media(max-width: 1024px){
+        flex-direction: column;
+    }
 }
 
 .four .button-container{
